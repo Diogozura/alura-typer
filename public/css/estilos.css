@@ -1,3 +1,7 @@
+body{
+    overflow: scroll;
+}
+
 .icones{
     vertical-align: middle;
 }
@@ -23,4 +27,7 @@
 }
 .borda-errado{
     border: 3px solid #f71313;
+}
+.placar{
+    display: none;
 }

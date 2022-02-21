@@ -1,3 +1,5 @@
+$("#botao-placar").click(mostraPlacar)
+
 function inserePlacar() {
     // find ele pega os elementos filhos 
     var corpoTabela = $(".placar").find("tbody")
@@ -41,4 +43,27 @@ function removeLinha() {
    
         event.preventDefault()
         $(this).parent().parent().remove()
-    }
+}
+    
+function mostraPlacar() {
+    // mostra e esconde 
+    // $(".placar").toggle()
+
+    // mostra 
+    // $(".placar").show()
+
+    // esconde 
+    // $(".placar").hide()
+
+    // mostra com animação 
+    // $(".placar").slideDown(3000)
+
+    // esconde com animação 
+    // $(".placar").slideUp(3000)
+
+    // monstra e esconde com Animação
+
+    $(".placar").slideToggle(700)
+
+
+}
