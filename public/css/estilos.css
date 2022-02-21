@@ -1,0 +1,26 @@
+.icones{
+    vertical-align: middle;
+}
+
+.campo-digitacao{
+    font-size: 1.2em;
+    height: 150px;
+    border-radius: 10px;
+
+    border: 3px solid black;
+}
+
+.frase{
+    font-size: 1.2em;
+    text-align: left;
+}
+.campo-desativado{
+    background-color: #d3d3d3
+}
+
+.borda-correto{
+    border: 3px solid #94f713;
+}
+.borda-errado{
+    border: 3px solid #f71313;
+}
