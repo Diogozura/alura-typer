@@ -12,11 +12,23 @@ function inserePlacar() {
         // add no começo
         corpoTabela.prepend(linha);
  
-    // add no final 
+    // add no final
     // corpoTabela.append(linha);
 
-
+    $(".placar").slideDown(500)
+    scrollPlacar()
+    
 }
+
+function scrollPlacar() {
+    // saber a posição na tela 
+    var posicaoPlacar = $(".placar").offset().top
+    console.log(posicaoPlacar+"px")
+    $("body").animate({
+        scrollTop: posicaoPlacar+"px"
+    },1000)
+ }
+
 function novaLinha(usuario, palavras) {
     // criar linha 
     var linha = $("<tr>")
@@ -42,7 +54,13 @@ function novaLinha(usuario, palavras) {
 function removeLinha() {
    
         event.preventDefault()
-        $(this).parent().parent().remove()
+        // $(this).parent().parent().remove()
+    var  linha = $(this).parent().parent()
+    linha.fadeOut(1000)
+
+    setTimeout(function() {
+        linha.remove()
+    },1000)
 }
     
 function mostraPlacar() {
@@ -63,7 +81,10 @@ function mostraPlacar() {
 
     // monstra e esconde com Animação
 
-    $(".placar").slideToggle(700)
+    // $(".placar").slideToggle(700)
+
+    // evita comportamentos estranhos com animação 
+    $(".placar").stop().slideToggle(700)
 
 
 }
